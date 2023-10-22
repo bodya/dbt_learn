@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: mmvb
+    database: mmvb
+    schema: public
+    tables:
+        - name: q_current_trades_options
+        - name: q_current_trades_options_stock_week
+        - name: q_current_trades_options_week
+        - name: q_unface_option

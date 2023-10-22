@@ -10,10 +10,12 @@ from {{ ref('unface_option') }}
 {# Выполнение запроса #}
 {% set result = run_query(emitent) %}
 
+{# если запускаем run #}
 {% if execute %}
     {% set result_list = zip(result.columns[0].values(),
                             result.columns[1].values())%}
 {% else %}
+    {# если просто компилируем, то передаем пустой массив #}
     {% set result_list = [] %}
 {% endif %}
 
